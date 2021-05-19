@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>卡帕足球</title> 	<!-- icon图标引用后台 -->
+	<link rel="shortcut icon" href="//img.361ding.com/b2b/8228002/system/20190618/1560840685844894.jpg" type="image/x-icon" /><link rel="stylesheet" href="../mall/pages/css/font/iconfont.css?1">
+<link rel="stylesheet" href="../mall/pages/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="../mall/css/global.css">
+<link rel="stylesheet" type="text/css" href="../mall/css/skin.css">
+<link rel="stylesheet" type="text/css" href="../mall/resources/font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]> 
+<link rel="stylesheet" type="text/css" href="../mall/resources/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+<script type="text/javascript" src="../mall/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../mall/js/public.js"></script>
+<script>
+    fixed = 2 ? 2 : 2;
+</script><link rel="stylesheet" type="text/css" href="/mall/css/index.css">
+<link rel="stylesheet" type="text/css" href="/mall/css/jquery.jslides.css">
+</head>
+<style>
+    #agebox_alert{position: fixed;width: 640px;height: 425px;left: calc(50% - 320px);top:-425px;z-index: 999999;display: inline-block;padding: 0}
+    .agebox_alert_pic{display: inline-block;width: 100%;height: 100%;line-height: 425px;text-align: center;vertical-align: middle}
+    .agebox_alert_pic img{max-width: 640px;max-height: 425px;vertical-align: middle;text-align: center}
+	#wrapbg{z-index: 999998}
+	#agebox_alert2{height: 20px;padding: 13px 5px 5px 20px;;width: 369px;left: 37%;top: 47%;z-index: 9999999}
+	#agebox_alert2 a{top: 13px;position: absolute;right: 12px;color: #999;font-size: 26px;cursor: pointer;}
+	.newAlert{background: #fff;position: fixed; top: 50%; left: 50%; z-index: 7005; border-radius: 5px; min-width: 100px;min-height: 26px;border: 1px solid #d9d9d9;padding: 30px;}
+	#wrapbg2{z-index: 9999998;position: fixed;_position: absolute;width: 100%;height: 100%; left: 0;top: 0;background: #000;opacity: .20;-moz-opacity: .20;filter: alpha(opacity=20)}
+</style>
+<body>
+	<!-- top bar -->
+	<!--顶部信息-->
+<div id="topbar">
+	<div class="layout clearfix">
+		<div class="lt logo">
+			<a href='/index.htm'><img src="//img.361ding.com/b2b/8228002/system/20190618/1560840752736075.jpg" class="pim"></a>
+					</div>
+		<div class="lt searchBox">
+			<div class="searchBar def-bd-1 clearfix">
+				<input name="itemName" id="itemName"
+					type="text" value="" class="ipt" placeholder="输入商品名称/编码">
+				<!-- <a id="topSearch" class="btn" href="javascript:;">搜索</a> -->
+				<a id="topSearch" class="btn def-bg-1 fa fa-search" href="javascript:;"></a>
+			</div>
+		</div>
+		<div class="rt shortcut_bar">
+			<ul>
+				<li class="l1 bd_r">
+					<a href="/console/home.htm" class="nav_li to-center">用户中心</a>
+				</li>
+								<li id="header-service">
+                    <i class="iconfont icon-kefu def-col-1"></i>
+                    <span>在线客服</span>
+                    <div class="Aeonline">
+                        <div class="consult">
+                        	                        	   	                            <a class="a1" id="Ae_csh" href="javascript:;"><img src="/mall/images/dhkf.png"><span class="kefu_name">微信和电话：18601047698</span></a>
+	                                                                                                                                                                    </div>
+                    </div>
+                </li>
+                				<li>
+					<a href="/console/shoppingCart1.htm" class="nav_li">
+						<i class="iconfont icon-gouwuche def-col-1"></i>
+                        <span>购物车</span>
+                        (
+                        <span class="cartnumtop cartnum def-col-1">
+                        0                        </span>
+                        )
+					</a>
+				</li>
+
+								<li id="ucenterTo">
+					<!-- <a href="/console/home.htm" class="name txt_sp def-col-1">
+											</a> -->
+											<a href="/toLogin.htm" class="def-col-1" data=>登录</a>
+															</li>
+				<!-- <li>
+					<a href="/logout.do">退出</a>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="prop" class="popbox" style="left: 40%; top: 40%;">
+	<div class='result'>
+		<i class='icon prot2'></i> <span></span>
+	</div>
+</div>
+
+
+<script>
+    $("#ucenterTo").hover(function(){
+        $("#ucenterBar").stop(true,true).slideToggle(150);
+    },function(){
+        $("#ucenterBar").stop(true,true).slideToggle(150);
+    })
+	
+	$("#header-service").hover(function(){
+        $(".Aeonline").stop(true,true).slideToggle(300);
+        var newWidth = $(".a1 span").width()
+        if(newWidth >73){
+            $(".Aeonline a span").width(newWidth)
+        }
+    },function(){
+        $(".Aeonline").stop(true,true).slideToggle(300);
+        var newWidth = $(".a1 span").width()
+        if(newWidth >73){
+            $(".Aeonline a span").width(newWidth)
+        }
+    })
+</script>
+<script type="text/javascript">
+
+ // 	if(1==2){
+	// 	$("#prop").show().find("span").html("该商城已过业务有效期，请联系客服或业务联系人！");
+	// 	$("body").append("<div id='wrapbgs'></div>");
+	// }else if(1==0){
+	// 	$("#prop").show().find("span").html("该商城已经停用，请联系客服或业务联系人！");
+	// 	$("body").append("<div id='wrapbgs'></div>");
+	// } 
+ 	$(function() {
+		//导航
+		nav_mouse("#allCategory", "#category", "active");
+		nav_mouse1(".firMenu", ".subBox", "cur");
+		$(".firMenu").hover(function () {
+			if($(this).find(".subBox dl").length <= 0) $(this).find(".subBox").removeClass("cur");
+		})
+		
+		
+		if($("#allCategory").find(".wttw").length>0){
+			$("#allCategory h2").css({"width":"200px","padding-left":"16px"});
+		}else{
+			$("#allCategory h2").css({"width":"174px","padding-left":"42px"});
+		}
+
+		//公告滚动
+		// var affWidth = $("#topbar .affiche dd").length * 600;
+		// $("#topbar .affiche dl").css({"width":affWidth});
+		var afficheTimer;
+		afficheTimer = setInterval(afficheAuto,3000);
+		function afficheAuto(){
+			var inout = $("#topbar .affiche dd").length , inHg = $("#topbar .affiche").height();
+			if(inout <= 1) return;
+			$("#topbar .affiche dl").animate({"margin-top":"-" + parseInt(inHg)},300,function(){
+				$("#topbar .affiche dd:first").appendTo("#topbar .affiche dl");
+				$("#topbar .affiche dl").css({"marginTop":"0"});
+			});		
+		}
+		$("#topbar .affiche").mouseover(function(){
+			clearInterval(afficheTimer);
+		});
+		$("#topbar .affiche").mouseout(function(){
+			afficheTimer = setInterval(afficheAuto,3000);
+		});
+	})
+	$("#itemName").bind("keypress", function(event) {
+		if (event.keyCode == 13) {
+			var itemName = $(this).val();
+			if (undefined == itemName) {
+				itemName = '';
+			}
+			if (typeof (itemName) == "undefined" || itemName == "输入商品名称/编码") {
+				itemName = '';
+			}
+			var url = "/item/itemsSearch.htm";
+			if (itemName != null && itemName != "") {
+				url += "?itemName=" + encodeURIComponent(itemName);
+			}
+			location.href = url;
+		}
+	})
+
+	jQuery("#topSearch").click(function() {
+		var itemName = $("#itemName").val() , simple = false , url;
+		if (undefined == itemName) {
+			itemName = '';
+		}
+		if (typeof (itemName) == "undefined" || itemName == "输入商品名称/编码") {
+			itemName = '';
+		}
+		if(simple){
+			url = "/distributor/item.htm";
+		}else{
+			url = "/item/itemsSearch.htm";
+		}
+		if (itemName != null && itemName != "") {
+			url += "?itemName=" + encodeURIComponent(itemName);
+		}
+		window.location.href = url;
+	})
+
+	jQuery(".brand_list .list dd").hover(function() {
+		if(jQuery(".brand").length>0){
+			var left1 = jQuery(this).offset().left;
+			var left2 = jQuery(".brand").offset().left;
+			var left = left1 - left2 - 1;
+			jQuery(".brand_list .list dd").removeClass("cur").find(">a").removeClass("def-col-1");
+			var dd = jQuery(this);
+			var firstChar = jQuery(this).find("a").html();
+			jQuery(this).addClass("cur").find(">a").addClass("def-col-1");
+			jQuery(this).find(".top img").css({
+				"left" : Math.ceil(left)
+			}).show();
+			jQuery(this).find(".brand").css({
+				"visibility" : "visible"
+			});
+			if (jQuery(this).find(".brand ul li").length == 0) {
+				jQuery
+						.ajax({
+							url : "/ajaxGetBrandByFirstChar.do",
+							data : {
+								"firstChar" : firstChar
+							},
+							type : "POST",
+							dataType : "json",
+							success : function(data) {
+								if (data.code == 0) {
+									var dataAry = data.result;
+									jQuery(dd).find(".brand ul")
+											.empty();
+									var str = "";
+									for ( var id in dataAry) {
+										var target = "_blank" , href = "/item/itemsSearch.htm";
+										if(false){
+											target = "_self" , href = "/distributor/item.htm";
+										}
+										str = "<li><a title='"
+												+ dataAry[id].brandName
+												+ "' href='" + href + "?brandID="
+												+ dataAry[id].brandID
+												+ "' target='" + target + "'>"
+										if (dataAry[id].picUrl) {
+											str += "<img src='"+dataAry[id].picUrl+"' title='"+dataAry[id].brandName+"'/>"
+										}
+										str += "<p>"
+												+ dataAry[id].brandName
+												+ "</p></a></li>";
+										jQuery(dd)
+												.find(".brand ul")
+												.append(str);
+									}
+								}
+							},
+							error : function() {
+								location.href = "/toLogin.htm";
+							}
+						});
+			}
+		}
+	}, function() {
+		if(jQuery(".brand").length>0){	
+			$(this).parent().find(".top img").hide();
+			jQuery(".brand_list .list dd").removeClass("cur").find("a").removeClass("def-col-1");
+			$(".brand").css({
+				"visibility" : "hidden"
+			});
+		}
+	})
+
+	jQuery(document).on("mouseenter", ".brand li", function() {
+		var img = $(this).find("img");
+		var p = $(this).find("p");
+		if (img.length > 0) {
+			img.hide();
+			p.show();
+		}
+	})
+	jQuery(document).on("mouseleave", ".brand li", function() {
+		var img = $(this).find("img");
+		var p = $(this).find("p");
+		if (img.length > 0) {
+			p.hide();
+			img.show();
+		}
+	})
+	jQuery(document).keydown(function (ev) {
+    	var currKey=0,ev=ev||event;
+    	currKey=ev.keyCode||ev.which||ev.charCode;
+        if (currKey == 13) {
+    		if(jQuery("#itemName").is(":focus")) jQuery("#topSearch").click();
+    		if(jQuery("#item_name").is(":focus")) jQuery("#top_search").click();
+        }
+    });
+    $(".ucenter-info-a").click(function(){
+    	localStorage.setItem("webUser","");
+    })
+</script>
+		<!-- 主导航 -->
+	<!--导航-->
+<div id="nav">
+	<div class="layout clearfix">
+		<div id="allCategory">
+			<h2 class="def-bg-1"><i style="margin-right:5px;font-size:20px" class="iconfont icon-fenlei"></i>学校</h2>
+			<div id="category" >
+				<div class="nav-bg"></div>
+				<ul>
+										<li  class="firMenu" >
+						<div class="nav_list firLink">
+							<p>
+																<a href="/item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球" class="txt_sp">
+									卡帕足球
+								</a>
+							</p>
+						</div>
+						<div class="subBox">
+							<div class="secMenu">
+															</div>
+						</div>
+					</li> 				</ul>
+				<div class="category-arrow">
+					<div class="arrow-bg"></div>
+					<div class="arrow-icon">
+						<i class="iconfont icon-iconfontxiala"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbar">
+			<ul class="nav-list">
+				<li><a href="/index.htm" class="gen-col-10">首页</a></li>
+								<li><a href="/item/itemsSearch.htm?brandID=6002012" class="gen-col-10" target="_blank">卡帕足球</a></li>
+							</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 侧边栏 -->
+<!--侧边栏-->
+<div class="aside-box">
+	<div class="aside-rt">
+		<ul>
+			<!-- <li class="user-center">
+				<div class="lf-show">
+					<a href="/console/home.htm">
+						会员中心 <i class="fa fa-caret-right"></i>
+					</a>
+				</div>
+				<a href="/console/home.htm"><span class="icon user"></span></a>
+			</li> -->
+			<li class="cart-box">
+				<div>
+					<span class="icon cart side"></span>
+					<p>购物车</p>
+					<b class="def-bg-1">0 </b>
+				</div>
+			</li>
+			<li class="collect-rt">
+				<div class="lf-show">
+					<a href="/console/fav.htm?status=1">
+						我的收藏 <i class="fa fa-caret-right"></i>
+					</a>
+				</div>
+				<a href="/console/fav.htm?status=1"><span class="fa fa-heart-o"></span></a>
+			</li>
+						<li class="help-rt">
+                <div class="lf-show">
+                    <a href="/helpDetail.htm">
+                        帮助中心 <i class="fa  fa-caret-right"></i>
+                    </a>
+                </div>
+                <a href="/helpDetail.htm"><span></span></a>
+	        </li>
+            		</ul>
+		<ul class="rt-bt">
+			<li class="code-state">
+	            <div class="lf-qrcode">
+	                <img src="">
+					<p class="txt_sp">微信扫一扫</p>
+	            </div>
+	            <a>
+                    <span class="fa fa-qrcode"></span>
+                </a>
+
+	        </li>
+			<li class="go-top">
+                <a>
+                    <span class="fa fa-caret-up"></span>
+                    <p>TOP</p>
+                </a>
+            </li>
+		</ul>
+	</div>
+	
+	<!--侧边栏购物车内容-->
+	<div class="aside-cart">
+		<p>
+			<span><i class="icon cart small grey"></i>购物车</span> <a href="/console/shoppingCart1.htm">全屏查看</a>
+		</p>
+		<div class="aside-prd-wrap"></div>
+		<div class="aside-cart-empty emptyList">
+			<img src="/mall/images/cart_empty.png" alt="">
+			<div class="info">
+				<p>购物车空空的</p>
+				<p>赶快去挑选喜欢的商品吧</p>
+			</div>
+		</div>
+		<div class="aside-cart-bottom">
+			<p class="clearfix">
+				<span class="num-box"><span class="def-col-1"></span> 件商品</span> <span
+					class="total-box">共计: <span class="def-col-1"><i class="currency">¥</i><span>0.00</span></span></span>
+			</p>
+			<a href="/console/shoppingCart1.htm" class="def-bg-1">去购物车结算</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript"
+	src="//cdn.bootcss.com/jquery.nicescroll/3.6.8/jquery.nicescroll.min.js"></script>
+<script type="text/javascript">
+	//不同屏幕侧边栏的适应
+    function sideIn(){
+        $('.cart-box').animate({'left': "0"}, 200);
+        $('.cart-box div').css('border-color', "#8c8c8c");
+        $('.aside-box').animate({'right': '-275px'}, 200);
+    }
+    function sideOut(){
+        $('.cart-box').animate({'left':"-40px"},200);
+        $('.cart-box div').css('border-color',"transparent");
+        $('.aside-box').animate({'right':'-315px'},200);
+    }
+    function stopAni(){
+        $('.aside-box').stop()
+        $('.cart-box').stop()
+    }
+    function sideJudge(){
+        if($(window).innerWidth()<1300){
+            sideOut();
+            $('.aside-box').mouseenter(function(){
+                if($(".aside-box").css('right') !== '0px') {
+                    stopAni();
+                    sideIn();
+                }
+            })
+            $('.aside-box').mouseleave(function(e){
+                stopAni();
+                if($(".aside-box").css('right') !== '0px'){
+                    sideOut();
+                }
+            })
+        } else {
+            stopAni();
+            sideIn();
+            $('.aside-box').off('mouseleave')
+            $('.aside-box').off('mouseenter')
+        }
+    }
+    sideJudge();
+    $(window).resize(sideJudge);
+    //侧边栏鼠标移入
+    $('.go-top').click(function(){
+        $('html,body').animate({scrollTop:0},500);
+    })
+    $('.aside-rt .rt-bt li:eq(0)').hover(function(){
+        $(this).toggleClass('active')
+    })
+    $('.aside-rt li').hover(function(){
+        $(this).find('.lf-show').show()
+    },function(){
+        $(this).find('.lf-show').hide()
+    })
+    //去除购物车内滚动影响全局,优化滚动条
+    $('.aside-prd-box').hover(function(){
+        $(this).find('.de-prd').show()
+    },function(){
+        $(this).find('.de-prd').hide()
+    })
+    $('.aside-prd-wrap').niceScroll({
+        cursorcolor: "#ccc",//#CC0071 光标颜色
+        cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+        touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+        cursorwidth: "5px", //像素光标的宽度
+        cursorborder: "0", //     游标边框css定义
+        cursorborderradius: "5px",//以像素为光标边界半径
+        autohidemode: false //是否隐藏滚动条
+    });
+
+    //侧边栏购物车点击
+     var asideCartValue = false;
+    var userPhone = "";
+    $('.aside-rt .cart-box').on('click', function() {
+        if (!asideCartValue) asideCart();
+        if (!userPhone) return false;
+        if($(".aside-box").css('right') == '0px'){
+            $('.aside-rt .cart-box').removeClass('active');
+            sideJudge()
+        } else{
+            $('.aside-rt .cart-box').addClass('active');
+            $(".aside-box").animate({
+                right: '0'
+            }, 200 );
+        }
+    })
+    function asideCart() {
+        $(".aside-prd-wrap").empty();
+        if (!userPhone) {
+            location.href = "/toLogin.htm";
+            return false;
+        }
+        jQuery.ajax({
+            url : "/ajaxGetShopppingcart.do",
+            type : "GET",
+            dataType : "html",
+            success : function(data) {
+                jQuery(".aside-prd-wrap").append(data);
+                asideCartValue = true;
+                asideCom();
+            },
+            error : function() {
+                openprot("系统出错", 3);
+            }
+        })
+    }
+    if (userPhone) asideCart();
+    $(document.body).not('.aside-cart').click(function(e){
+        if($(".aside-box").css('right') == '0px'){
+            $('.aside-rt .cart-box').removeClass('active');
+            sideJudge()
+        }
+    })
+    $('.aside-cart').click(function(e){
+        e.stopPropagation();
+    })
+    //购物车删除
+
+    $('.aside-prd-box .prd-de').on('click',function(){
+        if($(this).parent().parent().find('li').length == 1) $(this).parents('.aside-prd-box').remove();
+        $(this).parent().remove();
+        asideCom();
+    })
+    $('.aside-prd-box .de-prd').on('click',function(){
+        $(this).parents('.aside-prd-box').remove();
+        asideCom();
+    })
+    //购物车计算总价
+    function asideCom () {
+        var obj = totalCompute('.aside-prd-box>ul>li','.aside-prd-box .prd-num',' .prd-price>span',fixed);
+       	$('.aside-cart-bottom .num-box>span,.cart-box b,.cartnumtop').html($('.aside-prd-box li').length);
+        $('.aside-cart-bottom .total-box>span>span').html(obj.price);
+    }
+    
+    // asideCom();
+</script>
+<script>
+	var length = $(".firMenu").length;
+	length = length > 0 ? (length < 7 ? 7 : (length > 11 ? 11 : length)) : length;
+	if(length > 7){
+		var hg = numDiv(416,length);
+		$(".firMenu").height(hg);
+		$(".firMenu p").height(hg);
+		$(".firMenu p a").height(hg).css({"line-height":hg + "px"});						
+		$(".nav_icon").height(hg).css({"line-height":hg + "px"});
+		$(".firMenu .txt_sp").css({"line-height":hg + "px"});
+		$('.firMenu.overflow').hide();
+		if ($(".firMenu").length > 11) {
+			$('#category').addClass('has-arrow');
+		} else {
+			$('.category-arrow').hide();
+		}
+	} else {
+		$('.category-arrow').hide();
+	}
+
+	$('.category-arrow').on('click', function () {
+		if (!$(this).hasClass('active')) {
+			$(this).addClass('active');
+			$(this).find('.iconfont').removeClass('icon-iconfontxiala').addClass('icon-iconfontshouhui')
+			$('#category').addClass('full-display');
+			$('.firMenu.overflow').show();
+		} else {
+			$(this).removeClass('active');
+			$(this).find('.iconfont').removeClass('icon-iconfontshouhui').addClass('icon-iconfontxiala');
+			$('#category').removeClass('full-display');
+			$('.firMenu.overflow').hide();
+		}
+	});
+</script>	<!--下拉时的搜索框-->
+	<div class="down-search">
+	    <div class="down-box">
+	        <a href='/index.htm'> <img src="//img.361ding.com/b2b/8228002/system/20190618/1560840752736075.jpg" class="pim"></a>
+	        <div class="searchBar def-bd-1">
+	            <input name="itemName" id="item_name" type="text" class="ipt" placeholder="输入商品名称/编码">
+	            <!-- <a id="top_search" class="btn" href="javascript:;">搜索</a> -->
+	            <a id="top_search" class="btn def-bg-1 fa fa-search" href="javascript:;"></a>
+	        </div>
+	    </div>
+	</div>
+	<!-- banner -->
+	<div class="nav_bt"></div>
+
+	<!--Banner-->
+	<div class='banner layout of_hd lage'>
+			<ul id="slides">
+								<!-- <li style="background: #ffffff">
+					<div class="layout">
+						<a
+							href=" /item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球 "
+							target="_blank"><img src="//img.361ding.com/b2b/8228002/banner/20200618/1592454801839928.jpg"></a>
+					</div>
+				</li> -->
+								<!-- <li style="background: #ffffff">
+					<div class="layout">
+						<a
+							href=" /item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球 "
+							target="_blank"><img src="//img.361ding.com/b2b/8228002/banner/20200618/1592455077709946.jpg"></a>
+					</div>
+				</li> -->
+									            <li style="background: #ffffff">
+	                <div class="layout">
+	                    <a href="javascript:;" target="_blank" onClick="openBanner(this,'3','/item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球','1','4912008')" data="{categoryName=卡帕足球, advertType=3, second=1, backgroundColor=#ffffff, value=4912008, image=//img.361ding.com/b2b/8228002/banner/20200618/1592454801839928.jpg, url=/item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球, cType=1}"><img src="//img.361ding.com/b2b/8228002/banner/20200618/1592454801839928.jpg"></a>
+	                </div>
+	            </li>
+	            	            <li style="background: #ffffff">
+	                <div class="layout">
+	                    <a href="javascript:;" target="_blank" onClick="openBanner(this,'3','/item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球','1','4912008')" data="{categoryName=卡帕足球, advertType=3, second=1, backgroundColor=#ffffff, value=4912008, image=//img.361ding.com/b2b/8228002/banner/20200618/1592455077709946.jpg, url=/item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球, cType=1}"><img src="//img.361ding.com/b2b/8228002/banner/20200618/1592455077709946.jpg"></a>
+	                </div>
+	            </li>
+	            			</ul>
+	</div>
+
+	<!--Main-->
+	<div class="Main skin_index">
+
+		<!--广告栏-->
+		<div class="Column">
+			<div class="layout of_hd mt15">
+				<ul>
+									</ul>
+			</div>
+		</div>
+
+		<!--热门商品-->
+				<div class="hot_list">
+			<h1 class="list-title"><b></b>热门商品 <span class="fa fa-angle-right"></span><span
+            class="fa fa-angle-left"></span></h1>
+			<div class="carousel-hot">
+				<ul class="list">
+					 					<li>						<div class="">
+							<a href="/item/itemDetail.htm?itemID=8482007&skuID=9060007" target="_blank">
+								<div class="hot-img-mask">
+																<img src="//img.361ding.com/b2b/8228002/item/20200108/1578459759376134.jpg">
+																</div>
+								<p class="tt txt_sp">KAPPA足球-中性款足球长袜K09Y8WQ01</p>
+							</a>
+							<div class="plural">
+																																					<p>
+											<span class="gen-col-8">零售价：</span>
+											<span class="">
+												<i class="currency">¥</i>79.00
+											</span>
+										</p>
+																				                                    															</div>	
+						</div>    						<div class="">
+							<a href="/item/itemDetail.htm?itemID=7708122&skuID=8262294" target="_blank">
+								<div class="hot-img-mask">
+																<img src="//img.361ding.com/b2b/7702003/item/20190603/1559552002317497.jpg">
+																</div>
+								<p class="tt txt_sp">KAPPA足球-中性款足球长袜KB8W8WQ01S</p>
+							</a>
+							<div class="plural">
+																																					<p>
+											<span class="gen-col-8">零售价：</span>
+											<span class="">
+												<i class="currency">¥</i>79.00
+											</span>
+										</p>
+																				                                    															</div>	
+						</div>    						<div class="">
+							<a href="/item/itemDetail.htm?itemID=7708121&skuID=8262289" target="_blank">
+								<div class="hot-img-mask">
+																<img src="//img.361ding.com/b2b/7702003/item/20190603/1559552145431399.jpg">
+																</div>
+								<p class="tt txt_sp">KAPPA足球-中性款足球长袜KB8W8WQ02S</p>
+							</a>
+							<div class="plural">
+																																					<p>
+											<span class="gen-col-8">零售价：</span>
+											<span class="">
+												<i class="currency">¥</i>59.00
+											</span>
+										</p>
+																				                                    															</div>	
+						</div>  </li>
+					 				</ul>
+			</div>
+		</div>
+				<!--最近上新-->
+				<div class="new_list">
+			<h1 class="list-title"><b></b>最近上新 <span class="fa fa-angle-right"></span><span
+            class="fa fa-angle-left"></span></h1>
+			<div class="carousel-new">
+				<ul class="list">
+					 					<li>						<div>
+						 	<b class="left-b"></b>
+							<div class="">								
+		                        <img src="/mall/images/new-icon.png">
+								<a href="/item/itemDetail.htm?itemID=8482007&skuID=9060007" target="_blank">
+									<div class="new-img-mask ct"> 										<img src="//img.361ding.com/b2b/8228002/item/20200108/1578459759376134.jpg" class="pim">
+																			</div>
+									<p class="tt txt_sp">KAPPA足球-中性款足球长袜K09Y8WQ01</p>
+								</a>
+								<div class="plural">
+																																									<p>
+												<span class="gen-col-8">零售价：</span>
+												<span class="">
+													<i class="currency">¥</i>79.00
+												</span>
+											</p>
+																							                                    																	</div>
+							</div>
+						</div>    						<div>
+						 	<b class="left-b"></b>
+							<div class="">								
+		                        <img src="/mall/images/new-icon.png">
+								<a href="/item/itemDetail.htm?itemID=7708121&skuID=8262289" target="_blank">
+									<div class="new-img-mask ct"> 										<img src="//img.361ding.com/b2b/7702003/item/20190603/1559552145431399.jpg" class="pim">
+																			</div>
+									<p class="tt txt_sp">KAPPA足球-中性款足球长袜KB8W8WQ02S</p>
+								</a>
+								<div class="plural">
+																																									<p>
+												<span class="gen-col-8">零售价：</span>
+												<span class="">
+													<i class="currency">¥</i>59.00
+												</span>
+											</p>
+																							                                    																	</div>
+							</div>
+						</div>    						<div>
+						 	<b class="left-b"></b>
+							<div class="">								
+		                        <img src="/mall/images/new-icon.png">
+								<a href="/item/itemDetail.htm?itemID=7708122&skuID=8262294" target="_blank">
+									<div class="new-img-mask ct"> 										<img src="//img.361ding.com/b2b/7702003/item/20190603/1559552002317497.jpg" class="pim">
+																			</div>
+									<p class="tt txt_sp">KAPPA足球-中性款足球长袜KB8W8WQ01S</p>
+								</a>
+								<div class="plural">
+																																									<p>
+												<span class="gen-col-8">零售价：</span>
+												<span class="">
+													<i class="currency">¥</i>79.00
+												</span>
+											</p>
+																							                                    																	</div>
+							</div>
+						</div>  </li>
+					 				</ul>
+			</div>
+		</div>
+				<!--商家推荐-->
+				<!--产品楼层-->
+		<div class="layout mt20">
+						<div class="pd_list">
+								<div class="line clearfix">
+					<a href="/item/itemsSearch.htm?categoryID=4912008&cType=1&categoryName=卡帕足球"
+						class="rt more def-col-1"><em>查看更多</em><i class="fa fa-chevron-circle-right"></i></a>
+	                <div class="floor-title">
+	                    <b></b>卡帕足球<b></b>
+	                </div>
+				</div>
+				<div class="list clearfix">
+										<ul>
+																										<li class="item_img_hover">
+														<a href="/item/itemDetail.htm?itemID=8482007&skuID=9060007" target="_blank">
+								<div class="hot-img-mask">									<img src="//img.361ding.com/b2b/8228002/item/20200108/1578459759376134.jpg" class="pim">
+																	</div>
+								<p class="tt txt_sp">KAPPA足球-中性款足球长袜K09Y8WQ01</p>
+							</a>
+							<div class="kc_shop clearfix plural">
+																																					<p>
+											<span class="gen-col-8">零售价：</span>
+											<span class="">
+												<i class="currency">¥</i>79.00
+											</span>
+										</p>
+																				                                    															</div>
+						</li>
+																																<li class="item_img_hover">
+														<a href="/item/itemDetail.htm?itemID=7708121&skuID=8262289" target="_blank">
+								<div class="hot-img-mask">									<img src="//img.361ding.com/b2b/7702003/item/20190603/1559552145431399.jpg" class="pim">
+																	</div>
+								<p class="tt txt_sp">KAPPA足球-中性款足球长袜KB8W8WQ02S</p>
+							</a>
+							<div class="kc_shop clearfix plural">
+																																					<p>
+											<span class="gen-col-8">零售价：</span>
+											<span class="">
+												<i class="currency">¥</i>59.00
+											</span>
+										</p>
+																				                                    															</div>
+						</li>
+																																<li class="item_img_hover">
+														<a href="/item/itemDetail.htm?itemID=7708122&skuID=8262294" target="_blank">
+								<div class="hot-img-mask">									<img src="//img.361ding.com/b2b/7702003/item/20190603/1559552002317497.jpg" class="pim">
+																	</div>
+								<p class="tt txt_sp">KAPPA足球-中性款足球长袜KB8W8WQ01S</p>
+							</a>
+							<div class="kc_shop clearfix plural">
+																																					<p>
+											<span class="gen-col-8">零售价：</span>
+											<span class="">
+												<i class="currency">¥</i>79.00
+											</span>
+										</p>
+																				                                    															</div>
+						</li>
+																	</ul>
+				</div>
+							</div>
+					</div>
+
+	</div>
+		<div id="agebox_alert2" class="newAlert hide">
+		<span>当前版本浏览器可能存在不兼容的问题,请升级到IE9及以上版本</span>
+        <a href="javascript:;" class="closeLink" onClick="closediv2()">×</a>
+    </div>
+	<!-- footer -->
+		<!-- footer -->
+	<div id="footerBtm">
+					</div>
+	<div style="display: none;">
+   <script type="text/javascript">
+        var cnzz_s_tag = document.createElement('script');
+        cnzz_s_tag.type = 'text/javascript';
+        cnzz_s_tag.async = true;
+        cnzz_s_tag.charset = 'utf-8';
+        cnzz_s_tag.src = '//s9.cnzz.com/z_stat.php?id=1277994342&async=1';
+        var root_s = document.getElementsByTagName('script')[0];
+        root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277994365'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1277994365' type='text/javascript'%3E%3C/script%3E"));</script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1277994342'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1277994342' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+
+	<script type="text/javascript">
+	var url = document.location.href;
+    if (url.indexOf("361ding.com") > -1) { 
+    	var html="<a target='_blank' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602005693' style='display:inline-block;text-decoration:none;height:20px;line-height:20px;''><img src='https://img.361ding.com/b2b/1/beian.png' style='float:left;'/><p style='float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;'>浙公网安备 33010602005693号</p></a>";
+    	if(jQuery('#btmbar .info').length > 0){
+	        jQuery('#btmbar .info').append(html);
+    	}else{
+    		jQuery("#footerBtm").append("<div id='btmbar'><div class='layout clearfix'><div class='info'>"+html+"</div></div></div>")
+    	}
+    } 
+	</script>	<script type="text/javascript" src="/mall/js/jquery.jslides.js"></script>
+	<script type="text/javascript" src="/mall/js/unslider.js"></script>
+	<script>
+
+	$(function(){
+	if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<9){
+        // alert("您的浏览器版本过低，请下载IE9及以上版本");
+        $("body").append("<div id='wrapbg2'></div>");		
+		$("#agebox_alert2").css("display","block");
+    }
+        $(".pd_list .list").each(function() {
+        	var _this = $(this);
+            if(_this.find('.adv1').length === 0) {
+				_this.addClass("notHas");
+				_this.children("ul").css("width","100%");
+            }
+        });
+		for(j = 0;j<$(".notHas").length;j++)
+		$(".notHas:eq("+j+") ul li").each(function(z){
+			if(z == 4){
+				$(this).css("margin","0 0 0 10px")
+			}
+			else if(z % 5 ==0){
+				$(this).addClass("nom")
+			}
+		})
+		var pic = $("#agebox_alert").attr("data")
+            var day1 = new Date();
+             day1.setTime(day1.getTime());
+            var s1 = day1.getFullYear()+"-" + (day1.getMonth()+1) + "-" + day1.getDate();
+            if(pic == "null" || !pic){
+                return;
+            }
+            else{
+                if(pic != "null" && pic){
+                if(localStorage.getItem("href_url") != window.location.host){
+                    saveCookie()
+                 }
+				else{
+					if(s1 == localStorage.getItem("tomorrow")){
+						storage = window.localStorage;
+						localStorage.clear()
+						saveCookie()
+					}
+					else if(new Date(s1) > new Date(localStorage.getItem("tomorrow"))){									
+						localStorage.clear()
+						saveCookie()                            
+					}					
+					else{
+						$("#agebox_alert").hide()
+					}
+				}
+            }   
+            }
+	})
+
+    function saveCookie(){
+        $("body").append("<div id='wrapbg'></div>");
+        $("#agebox_alert").show()
+            var win_hei = $(window).height()
+            var height = win_hei/2 - 212
+            $("#agebox_alert").animate({
+                top: height
+            },1000);
+            href = window.location.host;
+             var day2 = new Date();
+             day2.setTime(day2.getTime());
+            var s2 = day2.getFullYear()+"-" + (day2.getMonth()+1) + "-" + day2.getDate();
+            var day3 = new Date();
+            day3.setTime(day3.getTime()+24*60*60*1000);
+            var s3 = day3.getFullYear()+"-" + (day3.getMonth()+1) + "-" + day3.getDate();
+            localStorage.setItem("href_url",href)
+            localStorage.setItem("today",s2)
+            localStorage.setItem("tomorrow",s3)
+    }
+        $("#item_name").bind("keypress", function(event) {
+            if (event.keyCode == 13) {
+                var itemName = $(this).val();
+                if (undefined == itemName) {
+                    itemName = '';
+                }
+                if (typeof (itemName) == "undefined" || itemName == "输入商品名称") {
+                    itemName = '';
+                }
+                var url = "/item/itemsSearch.htm";
+                if (itemName != null && itemName != "") {
+                    url += "?itemName=" + encodeURIComponent(itemName);
+                }
+                location.href = url;
+            }
+        })
+	    //底部边框加色
+	    $(".hot_list .list li>div").each(function (i) {
+	        $(this).addClass('bt-col' + i % 5)
+	        if (i % 5 == 0) $(this).addClass('nom')
+	    })
+	    // 热门上新左边框
+	    $(".new_list .list li div>b").each(function (i) {
+	        if (i % 5 == 0) $(this).removeClass('left-b')
+	    })
+	    //商家推荐左边框
+	    $('.shop-recom li b').each(function (i) {
+	        if (i % 4 == 0) $(this).removeClass('left-b')
+	    })
+		
+	    //导航
+	    /*
+	     *  热门和上新的轮播函数
+	     *  @obj 传入要轮播的外层对象,可改进为传入前进后退键
+	     * */
+	    function carousel(obj) {
+	        if (obj.find('ul>li').length > 1) obj.parent().find('.list-title .fa-angle-right').addClass('active');
+	        var unlist = obj.unslider({
+	            fluid: true,
+	            dots: false,
+	            complete: function () {
+	                var s = parseInt(obj.find('ul').css('left')) / -1200, l = obj.find('ul>li').length,
+	                    left = obj.parent().find('.list-title .fa-angle-left'),
+	                    right = obj.parent().find('.list-title .fa-angle-right');
+	                if (s == 0) {
+	                    left.removeClass('active');
+	                    left.off()
+	                } else {
+	                    left.addClass('active');
+	                    left.on('click', function () {
+	                        unlist.data('unslider').prev();
+	                    })
+	                }
+	                if (s < (l - 1)) {
+	                    right.addClass('active');
+	                    right.on('click', function () {
+	                        unlist.data('unslider').next();
+	                    })
+	                } else {
+	                    right.removeClass('active');
+	                    right.off()
+	                }
+	            },
+	            delay: 10000
+	        });
+	        obj.parent().find('.list-title .fa-angle-right.active').on('click', function () {
+	            unlist.data('unslider').next();
+	        })
+	    }
+	    carousel($('.carousel-hot'));
+	    carousel($('.carousel-new'));
+	
+	    nav_mouse("#allCategory", "#category", "active");
+	    nav_mouse1(".firMenu", ".subBox", "cur");
+
+		//公告模块，问好！
+		// now = new Date(), hour = now.getHours()
+		// if (hour >= 5 && hour < 12) {
+		// 	$(".account div.acnt1 p").html("Hi~ 上午好！")
+		// } else if (hour >= 12 && hour < 19) {
+		// 	$(".account div.acnt1 p").html("Hi~ 下午好！")
+		// } else {
+		// 	$(".account div.acnt1 p").html("Hi~ 晚上好！")
+		// }
+
+		//下拉出现搜索框
+		$(window).scroll(function() {
+			if($(this).scrollTop()>$(".Main").offset().top){
+	            $('.down-search').stop(true,true).slideDown();
+	        } else{
+	            $('.down-search').stop(true,true).slideUp();
+	        }
+			if ($("#itemName").val() != "") {
+				$("#item_name").val($("#itemName").val());
+			} else if ($("#item_name").val() != "") {
+				$("#itemName").val($("#item_name").val());
+			}
+		})
+
+		
+
+		jQuery("#top_search").click(function() {
+			var itemName = $("#item_name").val();
+			if (undefined == itemName) {
+				itemName = '';
+			}
+			if (typeof (itemName) == "undefined" || itemName == "输入商品名称") {
+				itemName = '';
+			}
+			var url = "/item/itemsSearch.htm";
+			if (itemName != null && itemName != "") {
+				url += "?itemName=" + encodeURIComponent(itemName);
+			}
+			location.href = url;
+		})
+
+		var bltTimer;
+	    var bltLength = $(".bulletin li").length;
+	    bltTimer = setInterval(bltAuto,5000);
+	    function bltAuto(){
+	    	if(bltLength <= 1) return;
+	    	var bltHeight = $(".bulletin li").height();
+	        // var i = $(".bulletin .cur").index();
+	        // i = i + 1;
+	        // if(i==bltLength){
+	        //     i=0;
+	        // }   
+	        $(".bulletin li:first").animate({"margin-top":"-" + parseInt(bltHeight)},300,function(){
+	            $(".bulletin ul li:first").appendTo(".bulletin ul");
+	            // $(".bulletin li:first").addClass("cur").siblings().removeClass("cur");
+	            $(".bulletin li").css({"marginTop":"0"});
+	        }); 
+	    }
+
+	function closediv() {
+        $("#wrapbg").remove();
+        $(".popbox").fadeOut(200);
+    }
+	function closediv2() {
+        $("#wrapbg2").remove();
+        $(".newAlert").fadeOut(200);
+    }
+
+    function openBanner(obj,type,url,second,value){
+        var href = "",data = $(obj).attr("data");
+        data = data.replace(/[{}\s]/g,"").split(",");
+        if(type == 1){
+            href = url;
+        }else if(type ==2){
+            if(second == 1){
+                href = "/subjectDetail.htm?subjectID="+value;
+            }else if(second == 2){
+
+            }else if(second == 3){
+                href = "/helpDetail.htm?helpID="+value;
+            }
+        }else if(type == 3){
+            if(second == 1){
+                href = "/item/itemsSearch.htm?categoryID="+value;
+                for(var i in data){
+                    if(data[i].split("=")[0] != "url"){
+                        if(data[i].indexOf("categoryName")>=0){
+                            href += "&categoryName="+ data[i].split("=")[1];
+                        }
+                        if(data[i].indexOf("cType")>=0){
+                            href += "&cType="+ data[i].split("=")[1];
+                        }
+                    }
+                }
+            }else if(second == 2){
+                href = "/item/itemsSearch.htm?brandID="+value;
+            }else if(second == 3){
+                href = "/item/itemsSearch.htm?itemName="+value;
+            }else if(second == 4){
+                href = "/item/itemDetail.htm?itemID="+value;
+            }else if(second == 5){
+                href = "/item/itemsSearch.htm?itemTag="+value;
+            }
+        }else if(type == 4){
+            if(second == 1){
+                href = "/item/brand.htm";
+            }else if(second == 2){
+                href = "/item/itemsSearch.htm";
+            }else if(second == 3){
+                href = "/distributor/fav.htm?status=1";
+            }
+        }
+        window.open(href);
+    }
+	</script>
+</body>
+</html>
