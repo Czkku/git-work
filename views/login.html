@@ -2,8 +2,10 @@
 <html dir="ltr" lang="en-US">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-	<title>Web 2.0 Login Form</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascripts/jq.js"></script>
+	<title>登录</title>
 
 	<!--- CSS --->
 	<link rel="stylesheet" href="css_now/loginstyle.css" type="text/css" />
@@ -12,29 +14,23 @@
 
 	<body>
 		<div id="container">
-			<form action="welcome.html">
+			<div class = "welcome">
 				<div class="login">LOGIN</div>
 				<div class="username-text">Username:</div>
 				<div class="password-text">Password:</div>
 				<div class="username-field">
-					<input id="name" type="text" name="username" placeholder="用户名" />
+					<input id="name" type="text" name="name" placeholder="用户名" />
 				</div>
 				<div class="password-field">
-					<input id="pass" type="password" name="password" placeholder="****" />
+					<input id="pass" type="password" name="pass" placeholder="****" />
 				</div>
 				<input type="checkbox" name="remember-me" id="remember-me" />
 				<label for="remember-me">Remember me</label>
 				<div class="forgot-usr-pwd">Forgot <a href="#">username</a> or <a href="#">password</a>?</div>
 				<input id="login" type ="submit" value="登录" />
-			</form>
-		</div>
-		<div id="footer">
-			Copyright &copy; 2014.Company name All rights reserved.
-			<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
-		</div>
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' 
-charset='gb2312'></script></div>
-</body>
+			</div>
+
+    </body>
 </html>
 <script>
     $("#login").click(function(){

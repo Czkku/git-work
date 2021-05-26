@@ -13,6 +13,8 @@ var galleryRouter = require('./routes/gallery');
 var contactRouter = require('./routes/contact');
 var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
+var backstageRouter = require('./routes/backstage');
+var addRouter = require('./routes/add');
 
 var app = express();
 
@@ -31,12 +33,17 @@ app.use(session({
 }))
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 app.use('/index', indexRouter);
 app.use('/single', singleRouter);
 app.use('/gallery', galleryRouter);
 app.use('/contact',contactRouter);
 app.use('/register',registerRouter);
 app.use('/login',loginRouter);
+app.use('/backstage',backstageRouter);
+app.use('/add',addRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,5 +60,22 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//测试
+// let data_json = [
+//     {
+//       "ptitle":"第一篇文章标题",
+//       "pcontent":"第一篇文章内容"
+//     },
+//     {
+//       "ptitle":"第二篇文章标题",
+//       "pcontent":"第二篇文章内容"
+//     }
+// ];
+// app.all('/index/',function(req,res){
+//   console.log('提交的参数是：',req.params.myPara)
+//   console.log('path:',req.path)
+//   res.render('index.html',{ myPara: req.params.myPara,sqldata: data_json})
+// });
 
 module.exports = app;

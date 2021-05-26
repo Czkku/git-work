@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改页面</title>
+</head>
+<body>
+<form action="/backstage/update" method="post">
+    <input type="hidden" value="<%= datas[0].pid %>" name="pid">
+    标题：<input type = "text" name = "ptitle" value="<%= datas[0].ptitle %>" /><br/>
+    文章内容：<input type = "text" name = "pcontent" value="<%= datas[0].pcontent %>" /><br/>
+    创建时间：<input type = "text" name = "createtime" value="<%= datas[0].createtime %>" /><br/>
+    创建者：<input type = "text" name = "createuser" value="<%= datas[0].createuser %>" /><br/>
+    修改时间：<input type = "text" name = "revisetime" value="<%= datas[0].revisetime %>" /><br/>
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>

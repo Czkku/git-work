@@ -10,7 +10,7 @@ router.get('/',(req,res) =>{
 
 router.post('/',(req,res) =>{
     let name = req.body.name;
-    let password =md5(req.body.pass) ;
+    let password =md5(req.body.pass);
     
     var query = 'insert tab_user(name,password) values("'+name+'","'+password+'")';
     connection.query(query, (query, (err,results,fields) => {
@@ -24,5 +24,5 @@ router.post('/',(req,res) =>{
     
 })
 
-module.exports = router;
+module.exports = router ;
 
