@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
     req.body.pcontent,
     req.body.createtime,
     req.body.createuser,
-    req.body.revisetime
+    new Date()
   ],(err,rows)=>{
     console.log("ERROR===",err)
     res.redirect('/backstage');
