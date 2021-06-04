@@ -57,10 +57,9 @@
                             <p><a href="/add">添加新随笔</a></p>
                             <p><a href="">添加文章</a></p>
                             <p><a href="">草稿箱</a></p>
-                            <form action="/backstage/search" method="post">
-                                文章名：<input type="text" name="s_name" value="  "><br>
-                                
-                                <input type="submit" value="查询">
+                            <form action="/backstage/search" method="POST">
+                                文章名：<input type="text" name="ptitle" ><br>
+                                <input id="query" type="submit" value="查询">
                             </form>
     
                         </div>
@@ -129,4 +128,23 @@
 
 </body>
 </html>
+<!-- <script>
+    $("#query").click(function(){
+        $.ajax({
+            type:"post",
+            url : "/backstage",
+            data:{"name":$("#s_name").val()},
+            success:function(data){
+                if(data.status == 1){
+                    alert("查询成功");
+                    window.location = "/backstag"
+                }
+                else{
+                    alert("查询失败")
+                }
+            }
+        })
+    })
+
+</script> -->
 

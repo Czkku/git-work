@@ -25,19 +25,19 @@ router.get('/add',(req,res)=>{
 // });
 
 //post请求
-router.post('/add',(req,res)=>{
+// router.post('/add',(req,res)=>{
   
-  db.sqlParam("insert into tab_passage(pid,ptitle,pcontent,createtime,createuser,revisetime) values(?,?,?,?,?,?)",[
-    req.body.pid,
-    req.body.ptitle,
-    req.body.pcontent,
-    req.body.createtime,
-    req.body.createuser,
-    req.body.revisetime
-  ],(err,rows)=>{
-    res.redirect('/backstage');
-  })
-})
+//   db.sqlParam("insert into tab_passage(pid,ptitle,pcontent,createtime,createuser,revisetime) values(?,?,?,?,?,?)",[
+//     req.body.pid,
+//     req.body.ptitle,
+//     req.body.pcontent,
+//     req.body.createtime,
+//     req.body.createuser,
+//     req.body.revisetime
+//   ],(err,rows)=>{
+//     res.redirect('/backstage');
+//   })
+// })
 
 
 //删除
@@ -90,26 +90,16 @@ router.post('/update', function (req, res) {
  
 });
 
-// 查询
-// router.post('/search',function (req, res) {
-//   var name = req.body.ptitle;
-//   var age = req.body.s_age;
-//   var sql = "select * from userInfo";
-//   if (name) {
-//       sql += " and name='" + name + "' ";
-//   }
-//   if (age) {
-//       sql += " and age=" + age + " ";
-//   }
-//   sql = sql.replace("and","where");
-//            if (err) {
-//                res.end("查询失败：", err)
-//            } else {
-//                res.render("backstage", {title: 'Express', datas: rows, s_name: name, s_age: age});
-//            }
-        
-// });
 
+// 查询
+router.post('/search',(req,res)=>{
+  db.sqlParam("select * from tab_passage where ptitle = ?",[
+    req.body.ptitle
+  ],(err,rows)=>{
+    console.log("错误"+err);
+    res.render("back", {data: rows});
+  })
+});
 
 
 

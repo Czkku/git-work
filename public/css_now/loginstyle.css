@@ -1,3 +1,12 @@
+/* -------------------------------------------------------
+
+	Description: Web 2.0 Login Form
+	Version: 1.0
+	Author: Anli Zaimi
+	Author URI: http://azmind.com
+
+------------------------------------------------------- */
+
 
 /* ------- This is the CSS Reset ------- */
 
@@ -84,7 +93,7 @@ body {
 
 /* ------- Login Form ------- */
 
-.welcome {
+form, .welcome {
 	background: url(images/form-bg.png) top left no-repeat;
 	width: 524px;
 	height: 262px;
@@ -244,6 +253,30 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 
 .home a, .home a:hover, .home a:focus {
-	color: #000000;
+	color: #ffffff;
 	text-decoration: none;
 }
+
+#footer {
+	margin: auto;
+	margin-top: 50px;
+	width: 500px;
+	height: 30px;
+	background: url(images/footer-bg.png) bottom center no-repeat;
+	text-align: center;
+	font-family: "Times New Roman", Times, Georgia;
+	font-weight: normal;
+	font-size: 16px;
+	color: #8d8d8d;
+}
+
+#footer a {
+	text-decoration: none;
+	color: #8d8d8d;
+}
+
+#footer a:hover, #footer a:focus {
+	text-decoration: none;
+	color: #2d2d2d;
+}
+

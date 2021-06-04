@@ -61,21 +61,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-//测试
-// let data_json = [
-//     {
-//       "ptitle":"第一篇文章标题",
-//       "pcontent":"第一篇文章内容"
-//     },
-//     {
-//       "ptitle":"第二篇文章标题",
-//       "pcontent":"第二篇文章内容"
-//     }
-// ];
-// app.all('/index/',function(req,res){
-//   console.log('提交的参数是：',req.params.myPara)
-//   console.log('path:',req.path)
-//   res.render('index.html',{ myPara: req.params.myPara,sqldata: data_json})
-// });
 
 module.exports = app;
